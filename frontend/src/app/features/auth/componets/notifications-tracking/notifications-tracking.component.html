@@ -1,0 +1,36 @@
+<div class="notifications-tracking-container">
+  <div class="card">
+    <div class="card-header">
+      <div class="icon">📩</div>
+      <h3>Notification</h3>
+      <span class="badge"></span>
+    </div>
+    <div class="card-content">
+      <div class="notification-item" *ngFor="let notification of notifications">
+        <div class="icon">📄</div>
+        <div>
+          <strong>{{ notification.date }}</strong>
+          <p>{{ notification.message }}</p>
+        </div>
+      </div>
+    </div>
+    <button class="view-all-button">View All</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="icon">📜</div>
+      <h3>Tracking History</h3>
+    </div>
+    <div class="card-content">
+      <div class="tracking-item" *ngFor="let history of trackingHistory">
+        <div class="icon">📄</div>
+        <div>
+          <strong>{{ history.date }} {{ history.title }}</strong>
+          <p>{{ history.description }}</p>
+        </div>
+      </div>
+    </div>
+    <button class="view-all-button">View All</button>
+  </div>
+</div>

@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.component.scss">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="login-form-container">
+      <div class="logo-container">
+        <img src="./../../../../../assets/icons/logo1.png" alt="Logo" class="logo">
+
+      </div>
+      <p class="c-name" >Student Connect</p>
+      <p class="d-name" >Login</p>
+
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+
+      
+        <div class="input-group">
+          <input type="text" #uname="ngModel" id="username" name="username" required placeholder="Username" [(ngModel)]="username">
+         @if(uname.invalid && uname.touched) {<small >Userame is required!</small>}
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" #pass="ngModel" name="password" required placeholder="Password" [(ngModel)]="password">
+          <button type="button" class="password-toggle" (click)="togglePasswordVisibility()">
+            <i class="fas fa-eye" *ngIf="passwordVisible"></i>
+            <i class="fas fa-eye-slash" *ngIf="!passwordVisible"></i>
+          </button>
+          @if(pass.invalid && pass.touched) {<small >Password is required!</small>}
+        </div>
+        
+        
+        <div class="remember-me">
+          <label for="remember-me">
+            <input type="checkbox" id="remember-me" name="remember-me" [(ngModel)]="remember"> Remember me
+          </label>
+          <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+
+        
+        
+        <button type="submit" class="login-btn sub">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+      
+     
+      <div class="footer-text">
+        <p>CopyRight &copy;  AkriviaHCM</p>
+      </div>
+    </div>
+    
+    <div class="image-container">
+      <img src="./../../../../../assets/images/logback.png" alt="Login Image" class="login-image">
+
+    </div>
+  
+  </div>
+</body>
+</html> -->
+
+
+  <div class="container">
+    <div class="login-form-container">
+      <div class="logo-container">
+        <img src="./../../../../../assets/icons/logo1.png" alt="Logo" class="logo">
+      </div>
+      <p class="c-name">Student Connect</p>
+      <p class="d-name">Login</p>
+
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+        <!-- Username Input -->
+        <div class="input-group">
+          <input
+            type="text"
+            id="username-input"
+            name="username"
+            required
+            placeholder="Username"
+            [(ngModel)]="username"
+            #uname="ngModel"
+          >
+          <small *ngIf="uname.invalid && uname.touched">Username is required!</small>
+        </div>
+
+        <!-- Password Input -->
+        <div class="input-group">
+          <input
+            [type]="passwordVisible ? 'text' : 'password'"
+            id="password-input"
+            name="password"
+            required
+            placeholder="Password"
+            [(ngModel)]="password"
+            #pass="ngModel"
+          >
+          <button type="button" class="password-toggle" (click)="togglePasswordVisibility()">
+            <i class="fas" [ngClass]="passwordVisible ? 'fa-eye' : 'fa-eye-slash'"></i>
+          </button>
+          <small *ngIf="pass.invalid && pass.touched">Password is required!</small>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="remember-me">
+          <label for="remember-me-checkbox">
+            <input
+              type="checkbox"
+              id="remember-me-checkbox"
+              name="rememberMe"
+              [(ngModel)]="remember"
+            >
+            Remember me
+          </label>
+          <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="login-btn sub" [disabled]="userForm.invalid">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+
+      <div class="footer-text">
+        <p>CopyRight &copy; AkriviaHCM</p>
+      </div>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-container">
+      <img src="./../../../../../assets/images/logback.png" alt="Login Image" class="login-image">
+    </div>
+  </div>

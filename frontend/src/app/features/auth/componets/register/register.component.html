@@ -1,0 +1,77 @@
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div class="card-header">
+            <h3 class="text-center">Register</h3>
+          </div>
+          <div class="card-body">
+            <form method="POST" [formGroup]="regForm" (ngSubmit)="onSubmit()" >
+              
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username"
+                formControlName="username" placeholder="Enter username" required>
+                <div class="form-text text-danger" *ngIf="UserName.errors?.['required'] && UserName.touched">
+                  Username Required!!
+                </div>
+                <div class="form-text text-danger" *ngIf="UserName.errors?.['minlength'] && UserName.touched">
+                  Name is too Short
+                </div>
+                <!-- <div class="form-text text-danger" *ngIf="UserName.errors?.['pattern'] && UserName.touched">
+                  Pattern didnt match!!
+                </div> -->
+              </div>
+              
+              
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" 
+                formControlName="email" placeholder="Enter email" required>
+                <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && Email.touched">
+                  Email Required!!
+                </div>
+                <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && Email.touched">
+                  Invalid Email!!
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone"
+                formControlName="phone" placeholder="Enter phone number" required>
+                <div class="form-text text-danger" *ngIf="Phone.errors?.['required'] && Phone.touched">
+                  PhoneNum Required!!
+                </div>
+                <div class="form-text text-danger" *ngIf="Phone.errors?.['pattern'] && Phone.touched">
+                  Invalid Phone number!!
+                </div>
+              </div>
+              
+             
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password"
+                formControlName="password" placeholder="Enter password" required>
+                <div class="form-text text-danger" *ngIf="Pass.errors?.['required'] && Pass.touched">
+                  Password Required!!
+                </div>
+                <div class="form-text text-danger" *ngIf="Pass.errors?.['minlength'] && Pass.touched">
+                  password is too short!!
+                </div>
+              </div>
+              
+            <!-- {{regForm.invalid}} -->
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+

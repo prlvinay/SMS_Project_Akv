@@ -1,0 +1,6 @@
+<div class="module-cards">
+  <div class="card" *ngFor="let card of cards" [ngStyle]="{'background-color': card.color}">
+    <h3 class="text">{{ card.title }}</h3>
+    <p class="text">{{ card.description }}</p>
+  </div>
+</div>

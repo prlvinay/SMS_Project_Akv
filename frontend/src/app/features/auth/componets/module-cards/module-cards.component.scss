@@ -1,0 +1,21 @@
+.module-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  margin-left: 50px;
+}
+.card {
+  flex: 1 1 calc(30% - 20px);
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  cursor:pointer;
+}
+.card:hover{
+  opacity: 0.8;
+}
+.text{
+  font-weight: normal;
+}

@@ -1,0 +1,38 @@
+<!-- <div class="user-bar">
+  <div class="logo">
+    <img src="" alt="Logo" />
+  </div>
+  <div class="user-details">
+    {{user.username}}
+  </div>
+</div> -->
+<div class="user-bar">
+  <div class="logo">
+    <img src="./../../../../../assets/icons/dash logo.jpg" alt="Logo" />
+  </div>
+  <div class="user-actions">
+    <span class="username">{{ user?.username }}</span>
+    <button (click)="logout()" class="logout-button">Logout</button>
+  </div>
+</div>
+<div class="top-navigation">
+  <div class="breadcrumb">
+    <span class="breadcrumb-item"> <i class="fas fa-power-off"></i> Home </span>
+    <span class="breadcrumb-separator">&gt;</span>
+    <span class="breadcrumb-item">
+      <i class="fas fa-building"></i> Client Name
+    </span>
+    <span class="breadcrumb-separator">&gt;</span>
+    <span class="breadcrumb-item">
+      <i class="fas fa-th-large"></i> Dashboard
+    </span>
+  </div>
+  <button class="public-app-button">Open Public App</button>
+</div>
+
+
+
+
+
+
+

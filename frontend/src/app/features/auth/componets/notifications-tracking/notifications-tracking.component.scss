@@ -1,0 +1,86 @@
+.notifications-tracking-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 80px; 
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-header .icon {
+  font-size: 24px;
+  color: #0056b3;
+}
+
+.card-header h3 {
+  font-size: 18px;
+  margin: 0;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.card-header .badge {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.notification-item,
+.tracking-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.notification-item .icon,
+.tracking-item .icon {
+  font-size: 18px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.notification-item p,
+.tracking-item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.view-all-button {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.view-all-button:hover {
+  background-color: #0056b3;
+}
